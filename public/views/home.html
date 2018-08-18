@@ -1,0 +1,33 @@
+<h1>Home Page</h1>
+<table>
+  <tr>
+    <td class="th">
+    </td>
+    <td class="th">Name
+    </td>
+    <td class="th">Genre
+    </td >
+    <td class="th">year
+    </td>
+      <td class="th">Price
+    </td>
+    <td class="th">Action
+    </td>
+  </tr>
+  <tr ng-repeat = "movie in vm.movies">
+    <td class="th"><img ng-src="{{movie.file_link}}" class="img">
+    </td>
+    <td class="td" ng-bind="movie.name">
+    </td>
+    <td class="td" ng-bind="movie.genre">
+    </td>
+    <td class="td" ng-bind="movie.year">
+    </td>
+    <td class="td" ng-bind="movie.price + '$'">
+    </td>
+    <td class="td">
+    <img src="/images/buy.svg" class="buy_img btn" ng-click="vm.addToCart(movie, 'basket')">
+    </td>
+  </tr>
+</table>
+<button type="button" name="button" class="button_cart_page" ui-sref="basket">basket page</button>

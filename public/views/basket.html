@@ -1,0 +1,45 @@
+<h1>Yur Basket </h1>
+<table>
+  <tr>
+    <td class="th">
+    </td>
+    <td class="th">Name
+    </td>
+    <td class="th">Genre
+    </td >
+    <td class="th">year
+    </td>
+      <td class="th">Price
+    </td>
+    <td class="th">Amount
+    </td>
+    <td class="th">Summary
+    </td>
+  </tr>
+  <tr ng-repeat = "basket in vm.basket">
+    <td class="th"><img ng-src="{{basket.file_link}}" class="img">
+    </td>
+    <td class="td" ng-bind="basket.name">
+    </td>
+    <td class="td" ng-bind="basket.genre">
+    </td>
+    <td class="td" ng-bind="basket.year">
+    </td>
+    <td class="td" ng-bind="basket.price + '$'">
+    </td>
+    <td class="td"ng-bind="basket.count">
+    </td>
+    <td class="td"ng-bind="itemTotal = basket.price * basket.count + '$' ">
+    </td>
+</tr>
+</table>
+<table>
+  <tr>
+      <td class="th">Total price</td>
+  </tr>
+  <tr>
+  <td class="td" ng-bind="vm.getTotal()"></td>
+  </tr>
+</table>
+
+<button type="button" name="button" class="button_cart_page" ui-sref="home">Home page</button>
